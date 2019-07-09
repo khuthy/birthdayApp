@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="dark">
+      <ion-title center>Happy Birthday</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+<h1>
+  Welcome
+  Birthday App
+</h1>
+
+  <div class="container">
+    
+    <div class="message" *ngIf="birthday">
+      <article>
+        <h3>Happy Birthday {{birthday.name}}</h3>
+        <p>{{birthday.message}}</p>
+        <button (click)="sendMessage()" ion-button color="light" small round>Send</button>
+      </article>
+    </div>
+     <div class="flex-box">
+        <h6 class="image">Click Below</h6>
+        <div class="sister"><button (click)="sister()" color="dark" ion-item clear>Send a happy Birthday to a Sister</button></div>
+        <div class="sister"><button (click)="brother()" color="dark" ion-item clear>Send a happy Birthday to a Brother</button></div>
+        <div class="sister"><button (click)="family()" color="dark" ion-item clear>Send a happy Birthday to a Family</button></div>
+     </div> 
+  </div>
+
+
+
+</ion-content>
+
+
